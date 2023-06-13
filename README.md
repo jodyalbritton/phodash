@@ -1,9 +1,18 @@
 # Phodash
 
-To start your Phoenix server:
+## Development
 
+To start your Phodash server:
+  * clone the repo
   * Run `mix setup` to install and setup dependencies
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+
+## Docker Compose 
+
+  * clone the repo
+  * docker compose up
+
+
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 

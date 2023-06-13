@@ -2,10 +2,11 @@ import Config
 
 # Configure your database
 config :phodash, Phodash.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "phodash_dev",
+  username: System.get_env("PGUSER", "postgres"),
+  password: System.get_env("PGPASSWORD", "postgres"),
+  database: System.get_env("PGDATABASE", "phodash_dev"),
+  hostname: System.get_env("PGHOST", "localhost"),
+  port: String.to_integer(System.get_env("PGPORT", "5432")),
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

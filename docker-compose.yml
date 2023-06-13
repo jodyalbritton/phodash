@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  phoenix:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "4000:4000"
+    environment:
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: phodash_dev
+      PGHOST: db
+      PGPORT: 5432
+    depends_on:
+      - db
+  db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
+    volumes:
+      - ./_pgdata:/var/lib/postgresql/data
+
+  
