@@ -1,0 +1,82 @@
+ <div id="dashboard" class="space-y-5">
+    <.header>
+        Categories
+        <:actions>
+            <.link patch={~p"/categories/new"}>
+            <.button>New Category</.button>
+            </.link>
+        </:actions>
+    </.header>
+
+    <div
+        id="categories"
+        phx-update="stream"
+        phx-hook="Sortable"
+        class="row">
+         <div
+          :for={{id, category} <- @streams.categories}
+          id={id}
+          data-id={category.id}
+          class="bg-neutral py-4 rounded-lg mb-5">
+          <div class="px-4 space-y-4">
+            <.header>
+              <%= category.title %>
+              <:actions>
+                <.link patch={~p"/categories/#{category}/edit"} alt="Edit list">
+                  <.icon name="hero-pencil-square" />
+                </.link>
+                <.link phx-click="delete-category" phx-value-id={category.id} alt="delete list" data-confirm="Are you sure?">
+                  <.icon name="hero-x-mark" />
+                </.link>
+                 <.link patch={~p"/categories/#{category.id}/items/new"}  alt="Edit list">
+                    <.icon name="hero-plus" />
+                </.link>
+              </:actions>
+            </.header>
+            <.live_component
+              id={category.id}
+              module={PhodashWeb.ItemComponent}
+              scope={@scope}
+              category={category}
+            />
+          </div>
+        </div>
+      </div>
+
+
+       <.modal
+        :if={@live_action in [:new_category, :edit_category]}
+        id="category-modal"
+        show
+        on_cancel={JS.patch(~p"/")}
+        >
+        <.live_component
+            scope={@scope}
+            module={PhodashWeb.CategoryLive.FormComponent}
+            id={@category.id || :new}
+            title={@page_title}
+            action={@live_action}
+            category={@category}
+            patch={~p"/"}
+        />
+        </.modal>
+
+        <.modal
+        :if={@live_action in [:new_item, :edit_item]}
+        id="item-modal"
+        show
+        on_cancel={JS.patch(~p"/")}
+        >
+        <.live_component
+            scope={@scope}
+            module={PhodashWeb.ItemLive.FormComponent}
+            id={@item.id || :new}
+            title={@page_title}
+            action={@live_action}
+            category={@category}
+            item={@item}
+            providers={@providers}
+            patch={~p"/"}
+        />
+        </.modal>
+    </div>

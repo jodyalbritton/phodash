@@ -1,0 +1,42 @@
+<.header>
+  Listing Providers
+  <:actions>
+    <.link patch={~p"/providers/new"}>
+      <.button>New Provider</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table
+  id="providers"
+  rows={@streams.providers}
+  row_click={fn {_id, provider} -> JS.navigate(~p"/providers/#{provider}") end}
+>
+  <:col :let={{_id, provider}} label="Name"><%= provider.name %></:col>
+  <:col :let={{_id, provider}} label="Thumbnail"><%= provider.thumbnail %></:col>
+  <:action :let={{_id, provider}}>
+    <div class="sr-only">
+      <.link navigate={~p"/providers/#{provider}"}>Show</.link>
+    </div>
+    <.link patch={~p"/providers/#{provider}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={{id, provider}}>
+    <.link
+      phx-click={JS.push("delete", value: %{id: provider.id}) |> hide("##{id}")}
+      data-confirm="Are you sure?"
+    >
+      Delete
+    </.link>
+  </:action>
+</.table>
+
+<.modal :if={@live_action in [:new, :edit]} id="provider-modal" show on_cancel={JS.patch(~p"/providers")}>
+  <.live_component
+    module={PhodashWeb.ProviderLive.FormComponent}
+    id={@provider.id || :new}
+    title={@page_title}
+    action={@live_action}
+    provider={@provider}
+    patch={~p"/providers"}
+  />
+</.modal>

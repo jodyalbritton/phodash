@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · Phoenix Framework">
+      <%= assigns[:page_title] || "Phodash" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body class="antialiased">
+    <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
+      <%= if @current_user do %>
+        <li>
+          <.link
+            navigate={~p"/users/settings"}
+            class="text-[0.8125rem] leading-6 link link-hover"
+          >
+            Settings
+          </.link>
+        </li>
+        <li>
+          <.link
+            href={~p"/users/log_out"}
+            method="delete"
+            class="text-[0.8125rem] leading-6 link link-hover"
+          >
+            Log out
+          </.link>
+        </li>
+      <% else %>
+        <li>
+          <.link
+            navigate={~p"/users/register"}
+            class="text-[0.8125rem] leading-6 link link-hover"
+          >
+            Register
+          </.link>
+        </li>
+        <li>
+          <.link
+            navigate={~p"/users/log_in"}
+            class="text-[0.8125rem] leading-6 link link-hover"
+          >
+            Log in
+          </.link>
+        </li>
+      <% end %>
+    </ul>
+    <%= @inner_content %>
+  </body>
+</html>
