@@ -469,12 +469,212 @@ defmodule Phodash.Services.Templates do
         description: "PosgreSQL Database Server"
       },
       %{
+        name: "Printer",
+        thumbnail: "png/printer.png"
+      },
+      %{
+        name: "PrivateBin",
+        thumbnail: "png/privatebin.png"
+      },
+      %{
+        name: "projectsend",
+        thumbnail: "png/projectsend.png"
+      },
+      %{
+        name: "prometheus",
+        thumbnail: "png/prometheus.png"
+      },
+      %{
+        name: "Prowlarr",
+        thumbnail: "png/prowlarr.png"
+      },
+      %{
         name: "ProxMox",
         thumbnail: "png/proxmox.png"
       },
       %{
-        name: "SabNzb",
+        name: "Prtg",
+        thumbnail: "png/prtg.png"
+      },
+      %{
+        name: "psitransfer",
+        thumbnail: "png/psitransfer.png"
+      },
+      %{
+        name: "Pterodactyl",
+        thumbnail: "png/pterodactyl.png"
+      },
+      %{
+        name: "pyload",
+        thumbnail: "png/pyload.png"
+      },
+      %{
+        name: "qBitTorrent",
+        thumbnail: "png/qbittorrent.png"
+      },
+      %{
+        name: "QNap",
+        thumbnail: "png/qnap.png"
+      },
+      %{
+        name: "RabittMQ",
+        thumbnail: "png/rabbitmq.png"
+      },
+      %{
+        name: "Rain Loop",
+        thumbnail: "png/rainloop.png"
+      },
+      %{
+        name: "Rancher",
+        thumbnail: "png/rancher.png"
+      },
+      %{
+        name: "Raneto",
+        thumbnail: "png/raneto.png"
+      },
+      %{
+        name: "RClone",
+        thumbnail: "png/rclone.png"
+      },
+      %{
+        name: "Radarr",
+        thumbnail: "png/radarr.png"
+      },
+      %{
+        name: "RecalBox",
+        thumbnail: "png/recalbox.png"
+      },
+      %{
+        name: "Redis",
+        thumbnail: "png/redis.png"
+      },
+      %{
+        name: "Requestrr",
+        thumbnail: "png/requestrr.png"
+      },
+      %{
+        name: "Resilio Sync",
+        thumbnail: "png/resiliosync.png"
+      },
+      %{
+        name: "Riot",
+        thumbnail: "png/riot.png"
+      },
+      %{
+        name: "Rocket Chat",
+        thumbnail: "png/rocketchat.png"
+      },
+      %{
+        name: "Rompya",
+        thumbnail: "png/rompya.png"
+      },
+      %{
+        name: "Rook",
+        thumbnail: "png/rook.png"
+      },
+      %{
+        name: "Round Cube",
+        thumbnail: "png/roundcube.png"
+      },
+      %{
+        name: "Router",
+        thumbnail: "png/router.png"
+      },
+      %{
+        name: "RspAMD",
+        thumbnail: "png/rspamd.png"
+      },
+      %{
+        name: "R Studio Server",
+        thumbnail: "png/rstudioserver.png"
+      },
+      %{
+        name: "Run Deck",
+        thumbnail: "png/rundeck.png"
+      },
+      %{
+        name: "Rune Audio",
+        thumbnail: "png/runeaudio.png"
+      },
+      %{
+        name: "RUTorrent",
+        thumbnail: "png/rutorrent.png"
+      },
+      %{
+        name: "SabNzbD",
         thumbnail: "png/sabnzbd.png"
+      },
+      %{
+        name: "Scrutiny",
+        thumbnail: "png/scrutiny.png"
+      },
+      %{
+        name: "Seafile",
+        thumbnail: "png/seafile.png"
+      },
+      %{
+        name: "searxmetasearchengine",
+        thumbnail: "png/searxmetasearchengine.png"
+      },
+      %{
+        name: "ServiIO",
+        thumbnail: "png/serviio.png"
+      },
+      %{
+        name: "Shaarli",
+        thumbnail: "png/shaarli.png"
+      },
+      %{
+        name: "Shinobi",
+        thumbnail: "png/shinobi.png"
+      },
+      %{
+        name: "SHODAN",
+        thumbnail: "png/SHODAN.jpg"
+      },
+      %{
+        name: "SickBeard",
+        thumbnail: "png/sickbeard.png"
+      },
+      %{
+        name: "SickChill",
+        thumbnail: "png/sickchill.png"
+      },
+      %{
+        name: "SickGear",
+        thumbnail: "png/sickgear.png"
+      },
+      %{
+        name: "Sinus Bot",
+        thumbnail: "png/sinusbot.png"
+      },
+      %{
+        name: "Slack",
+        thumbnail: "png/slack.png"
+      },
+      %{
+        name: "Snibox",
+        thumbnail: "png/snibox.png"
+      },
+      %{
+        name: "SonarQube",
+        thumbnail: "png/sonarqube.png"
+      },
+      %{
+        name: "Sonarr",
+        thumbnail: "png/sonarr.png"
+      },
+      %{
+        name: "Source Graph",
+        thumbnail: "png/sourcegraph.png"
+      },
+      %{
+        name: "Splunk",
+        thumbnail: "png/splunk.png"
+      },
+      %{
+        name: "SpotWeb",
+        thumbnail: "png/spotweb.png"
       },
       %{
         name: "Squidex",
@@ -558,7 +758,7 @@ defmodule Phodash.Services.Templates do
       },
       %{
         name: "Transmission",
-        thumbnail: "png/transmisson.png"
+        thumbnail: "png/transmission.png"
       },
       %{
         name: "Trilium",
@@ -757,8 +957,8 @@ defmodule Phodash.Services.Templates do
         thumbnail: "png/zigbee2mqtt.png"
       },
       %{
-        name: "Zinc",
-        thumbnail: "png/zinc.png"
+        name: "Znc",
+        thumbnail: "png/znc.png"
       },
       %{
         name: "Zoneminder",
