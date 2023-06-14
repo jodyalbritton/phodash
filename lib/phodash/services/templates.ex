@@ -751,7 +751,7 @@ defmodule Phodash.Services.Templates do
       %{
         name: "Zabbix",
         thumbnail: "png/zabbix.png"
-      }
+      },
       %{
         name: "Zigbee2Mqtt",
         thumbnail: "png/zigbee2mqtt.png"
@@ -759,15 +759,15 @@ defmodule Phodash.Services.Templates do
       %{
         name: "Zinc",
         thumbnail: "png/zinc.png"
-      }
+      },
       %{
         name: "Zoneminder",
         thumbnail: "png/zoneminder.png"
-      }
+      },
       %{
         name: "Zulip",
         thumbnail: "png/zulip.png"
-      }
+      },
       %{
         name: "ZwaveJs",
         thumbnail: "png/zwavejs.png"
