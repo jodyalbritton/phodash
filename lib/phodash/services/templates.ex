@@ -138,6 +138,10 @@ defmodule Phodash.Services.Templates do
         thumbnail: "png/cabot.png"
       },
       %{
+        name: "Caddy",
+        thumbnail: "svg/caddy.svg"
+      },
+      %{
         name: "CAdvisor",
         thumbnail: "png/cadvisor.png"
       },
@@ -176,6 +180,10 @@ defmodule Phodash.Services.Templates do
       %{
         name: "CloudCMD",
         thumbnail: "png/cloudcmd.png"
+      },
+      %{
+        name: "Cloudflare",
+        thumbnail: "svg/cloudflare.svg"
       },
       %{
         name: "Cockpit",
@@ -359,6 +367,10 @@ defmodule Phodash.Services.Templates do
         thumbnail: "png/freenas.png"
       },
       %{
+        name: "Frigate",
+        thumbnail: "svg/frigate.svg"
+      },
+      %{
         name: "Ghost",
         thumbnail: "png/ghost.png"
       },
@@ -423,44 +435,589 @@ defmodule Phodash.Services.Templates do
         thumbnail: "png/guacamole.png"
       },
       %{
+        name: "Handbrake",
+        thumbnail: "png/handbrake.png"
+      },
+      %{
+        name: "HA Proxy",
+        thumbnail: "png/haproxy.png"
+      },
+      %{
+        name: "Harbor",
+        thumbnail: "png/hasura.png"
+      },
+      %{
+        name: "Hasura",
+        thumbnail: "png/hasura.png"
+      },
+      %{
         name: "HD Home Run",
         thumbnail: "png/hdhomerun.png"
+      },
+      %{
+        name: "Headphones",
+        thumbnail: "png/headphones.png"
+      },
+      %{
+        name: "Healthchecks",
+        thumbnail: "png/healthchecks.png"
+      },
+      %{
+        name: "Heimdall",
+        thumbnail: "png/heimdall.png"
       },
       %{
         name: "Home Assistant",
         thumbnail: "png/home-assistant.png"
       },
       %{
+        name: "Homer Bridge",
+        thumbnail: "png/homebridge.png"
+      },
+      %{
+        name: "Homer",
+        thumbnail: "png/homer.png"
+      },
+      %{
+        name: "HP",
+        thumbnail: "png/hp.png"
+      },
+      %{
         name: "Hubitat",
         thumbnail: "png/hubitat.png"
+      },
+      %{
+        name: "Huginn",
+        thumbnail: "png/huginn.png"
+      },
+      %{
+        name: "Hugo",
+        thumbnail: "png/hugo.png"
+      },
+      %{
+        name: "Hydra",
+        thumbnail: "png/hydra.png"
+      },
+      %{
+        name: "Ice Cast",
+        thumbnail: "png/icecast.png"
+      },
+      %{
+        name: "Icinga",
+        thumbnail: "png/icinga.png"
+      },
+      %{
+        name: "iDrac",
+        thumbnail: "png/idrac.png"
+      },
+      %{
+        name: "ILO",
+        thumbnail: "png/ilo.png"
+      },
+      %{
+        name: "Immich",
+        thumbnail: "png/immich.png"
+      },
+      %{
+        name: "InfoBlox",
+        thumbnail: "png/infoblox.png"
+      },
+      %{
+        name: "Invidious",
+        thumbnail: "png/invidious.png"
+      },
+      %{
+        name: "Invoice Ninja",
+        thumbnail: "png/invoiceninja.png"
+      },
+      %{
+        name: "IO Broker",
+        thumbnail: "png/irc.png"
+      },
+      %{
+        name: "IRC",
+        thumbnail: "png/irc.png"
       },
       %{
         name: "Jackett",
         thumbnail: "png/jackett.png"
       },
       %{
+        name: "Jaeger",
+        thumbnail: "png/jaeger.png"
+      },
+      %{
+        name: "JDownloader",
+        thumbnail: "png/jdownloader.png"
+      },
+      %{
+        name: "Jeedom",
+        thumbnail: "png/jeedom.png"
+      },
+      %{
         name: "Jellyfin",
         thumbnail: "png/jellyfin.png"
       },
       %{
-        name: "Next Cloud",
+        name: "Jenkins",
+        thumbnail: "png/jenkins.png"
+      },
+      %{
+        name: "Jitsi Meet",
+        thumbnail: "png/jitsimeet.png"
+      },
+      %{
+        name: "Joomla",
+        thumbnail: "png/joomla.png"
+      },
+      %{
+        name: "Joplin",
+        thumbnail: "png/joplin.png"
+      },
+      %{
+        name: "Kanboard",
+        thumbnail: "png/kanboard.png"
+      },
+      %{
+        name: "Kavita",
+        thumbnail: "png/kavita.png"
+      },
+      %{
+        name: "Keila",
+        thumbnail: "png/keila.png"
+      },
+      %{
+        name: "Key Cloak",
+        thumbnail: "png/keycloak.png"
+      },
+      %{
+        name: "Kibana",
+        thumbnail: "png/kibana.png"
+      },
+      %{
+        name: "Kimai",
+        thumbnail: "png/kimai.png"
+      },
+      %{
+        name: "Kitana",
+        thumbnail: "png/kitana.png"
+      },
+      %{
+        name: "Kodi",
+        thumbnail: "png/kodi.png"
+      },
+      %{
+        name: "Komga",
+        thumbnail: "png/komga.png"
+      },
+      %{
+        name: "Krusader",
+        thumbnail: "png/krusader.png"
+      },
+      %{
+        name: "Kubernetes Dashboard",
+        thumbnail: "png/kubernetes-dashboard.png"
+      },
+      %{
+        name: "Kutt",
+        thumbnail: "png/kutt.png"
+      },
+      %{
+        name: "Lazy Librarian",
+        thumbnail: "png/lazylibrarian.png"
+      },
+      %{
+        name: "Leantime",
+        thumbnail: "png/leantime.png"
+      },
+      %{
+        name: "Lemon LDAP NG",
+        thumbnail: "png/lemonldapng.png"
+      },
+      %{
+        name: "Let's Encrypt",
+        thumbnail: "png/letencrypt.png"
+      },
+      %{
+        name: "Libre NMS",
+        thumbnail: "png/librenms.png"
+      },
+      %{
+        name: "Libre Photos",
+        thumbnail: "png/librephotos.png"
+      },
+      %{
+        name: "Librespeed",
+        thumbnail: "png/librespeed.png"
+      },
+      %{
+        name: "Lidarr",
+        thumbnail: "png/lidarr.png"
+      },
+      %{
+        name: "Link Ding",
+        thumbnail: "png/linkding.png"
+      },
+      %{
+        name: "List Monk",
+        thumbnail: "png/listmonk.png"
+      },
+      %{
+        name: "LogStash",
+        thumbnail: "png/logstash.png"
+      },
+      %{
+        name: "Loki",
+        thumbnail: "png/loki.png"
+      },
+      %{
+        name: "Longhorn",
+        thumbnail: "png/longhorn.png"
+      },
+      %{
+        name: "Lychee",
+        thumbnail: "png/lychee.png"
+      },
+      %{
+        name: "Mail Cow",
+        thumbnail: "png/mailcow.png"
+      },
+      %{
+        name: "Mail Hog",
+        thumbnail: "png/mailhog.png"
+      },
+      %{
+        name: "Main Sail",
+        thumbnail: "png/mainsail.png"
+      },
+      %{
+        name: "Mak",
+        thumbnail: "png/mak.png"
+      },
+      %{
+        name: "Mastodon",
+        thumbnail: "png/mastodon.png"
+      },
+      %{
+        name: "MatterMost",
+        thumbnail: "png/mattermost.png"
+      },
+      %{
+        name: "MayaneDMS",
+        thumbnail: "png/mayanedms.png"
+      },
+      %{
+        name: "MCMyAdmin",
+        thumbnail: "png/mcmyadmin.png"
+      },
+      %{
+        name: "Mealie",
+        thumbnail: "png/mealie.png"
+      },
+      %{
+        name: "Media Wiki",
+        thumbnail: "png/mediawiki.png"
+      },
+      %{
+        name: "Medusa",
+        thumbnail: "png/medusa.png"
+      },
+      %{
+        name: "Meraki",
+        thumbnail: "png/meraki.png"
+      },
+      %{
+        name: "Microsoft Todo",
+        thumbnail: "png/microsoft-todo.png"
+      },
+      %{
+        name: "Microtik",
+        thumbnail: "png/mikrotik.png"
+      },
+      %{
+        name: "MineOS",
+        thumbnail: "png/mineos.png"
+      },
+      %{
+        name: "MiniFlux",
+        thumbnail: "png/miniflux.png"
+      },
+      %{
+        name: "Minio",
+        thumbnail: "png/minio.png"
+      },
+      %{
+        name: "MKDocs",
+        thumbnail: "png/mkdocs.png"
+      },
+      %{
+        name: "Molecule",
+        thumbnail: "png/molecule.png"
+      },
+      %{
+        name: "Mongo DB",
+        thumbnail: "png/mongodb.png"
+      },
+      %{
+        name: "Monica",
+        thumbnail: "png/monica.png"
+      },
+      %{
+        name: "Monit",
+        thumbnail: "png/monit.png"
+      },
+      %{
+        name: "MotionEye",
+        thumbnail: "png/motioneye.png"
+      },
+      %{
+        name: "MQTT",
+        thumbnail: "png/mqtt.png"
+      },
+      %{
+        name: "Mylar",
+        thumbnail: "png/mylar.png"
+      },
+      %{
+        name: "N8N",
+        thumbnail: "png/n8n.png"
+      },
+      %{
+        name: "Nagios",
+        thumbnail: "png/nagios.png"
+      },
+      %{
+        name: "Navidrome",
+        thumbnail: "png/navidrome.png"
+      },
+      %{
+        name: "NCore",
+        thumbnail: "png/ncore.png"
+      },
+      %{
+        name: "Nessus",
+        thumbnail: "png/nessus.png"
+      },
+      %{
+        name: "Netatmo",
+        thumbnail: "png/netatmo.png"
+      },
+      %{
+        name: "Net Boot",
+        thumbnail: "png/netboot.png"
+      },
+      %{
+        name: "NetBoot XYZ",
+        thumbnail: "png/netbootxyz.png"
+      },
+      %{
+        name: "Netbox",
+        thumbnail: "png/netbox.png"
+      },
+      %{
+        name: "Net Data",
+        thumbnail: "png/netdata.png"
+      },
+      %{
+        name: "NextCloud",
         thumbnail: "png/nextcloud.png"
+      },
+      %{
+        name: "NGINX",
+        thumbnail: "png/nginx.png"
+      },
+      %{
+        name: "NGINX Proxy Manager",
+        thumbnail: "png/nginxproxymanager.png"
+      },
+      %{
+        name: "NodeRed",
+        thumbnail: "png/nodered.png"
+      },
+      %{
+        name: "Now Showing",
+        thumbnail: "png/nowshowing.png"
+      },
+      %{
+        name: "Ntop",
+        thumbnail: "png/ntop.png"
+      },
+      %{
+        name: "Nx Filter",
+        thumbnail: "png/nxfilter.png"
+      },
+      %{
+        name: "NZBGet",
+        thumbnail: "png/nzbget.png"
+      },
+      %{
+        name: "NZBHydra",
+        thumbnail: "png/nzbhydra.png"
+      },
+      %{
+        name: "OctoPrint",
+        thumbnail: "png/octoprint.png"
+      },
+      %{
+        name: "Omada",
+        thumbnail: "png/omada.png"
+      },
+      %{
+        name: "OpenHab",
+        thumbnail: "png/openhab.png"
+      },
+      %{
+        name: "Open Map Tiler",
+        thumbnail: "png/openmaptiler.png"
+      },
+      %{
+        name: "Open Media Vault",
+        thumbnail: "png/openmediavault.png"
+      },
+      %{
+        name: "Open Speedtest",
+        thumbnail: "png/openspeedtest.png"
+      },
+      %{
+        name: "Open Sprinkler",
+        thumbnail: "png/opensprinkler.png"
+      },
+      %{
+        name: "OpenVPN",
+        thumbnail: "png/openvpn.png"
+      },
+      %{
+        name: "OpenWRT",
+        thumbnail: "png/openwrt.png"
+      },
+      %{
+        name: "OpenSense",
+        thumbnail: "png/opnsense.png"
+      },
+      %{
+        name: "OS Ticket",
+        thumbnail: "png/osticket.png"
+      },
+      %{
+        name: "Overseer",
+        thumbnail: "png/overseerr.png"
+      },
+      %{
+        name: "OwnCloud",
+        thumbnail: "png/owncloud.png"
+      },
+      %{
+        name: "OwnPhotos",
+        thumbnail: "png/ownphotos.png"
+      },
+      %{
+        name: "Pager Duty",
+        thumbnail: "png/pagerduty.png"
+      },
+      %{
+        name: "Palo Alto Networks",
+        thumbnail: "png/paloaltonetworks.png"
+      },
+      %{
+        name: "Paper Merge",
+        thumbnail: "png/papermerge.png"
+      },
+      %{
+        name: "Partkeepr",
+        thumbnail: "png/partkeepr.png"
+      },
+      %{
+        name: "Peer Tube",
+        thumbnail: "png/peertube.png"
       },
       %{
         name: "PfSense",
         thumbnail: "png/pfsense.png"
       },
       %{
+        name: "PGAdmin",
+        thumbnail: "png/pgadmin.png"
+      },
+      %{
+        name: "Phantom Bot",
+        thumbnail: "png/phantombot.png"
+      },
+      %{
+        name: "Photo Prism",
+        thumbnail: "png/photoprism.png"
+      },
+      %{
+        name: "Photo Structure",
+        thumbnail: "png/photostructure.png"
+      },
+      %{
+        name: "Photo View",
+        thumbnail: "png/photoview.png"
+      },
+      %{
+        name: "PHP LDAP Admin",
+        thumbnail: "png/phpldapadmin.png"
+      },
+      %{
+        name: "PHP MyAdmin",
+        thumbnail: "png/phpmyadmin.png"
+      },
+      %{
+        name: "PiAware",
+        thumbnail: "png/piaware.png"
+      },
+      %{
+
         name: "Pi-Hole",
         thumbnail: "png/pihole.png"
+      },
+      %{
+        name: "Pingdom",
+        thumbnail: "png/pingdom.png"
+      },
+      %{
+        name: "Piweigo",
+        thumbnail: "png/piwigo.png"
+      },
+      %{
+        name: "Plausible",
+        thumbnail: "png/plausible.png"
+      },
+      %{
+        name: "Pleroma",
+        thumbnail: "png/pleroma.png"
+      },
+      %{
+        name: "Plesk",
+        thumbnail: "png/plesk.png"
       },
       %{
         name: "Plex",
         thumbnail: "png/plex.png"
       },
       %{
+        name: "Plex Drive",
+        thumbnail: "png/plexdrive.png"
+      },
+      %{
+        name: "Plex Requests",
+        thumbnail: "png/plexrequests.png"
+      },
+      %{
+        name: "Plume",
+        thumbnail: "png/plume.png"
+      },
+      %{
+        name: "Podify",
+        thumbnail: "png/podify.png"
+      },
+      %{
         name: "Portainer",
         thumbnail: "png/portainer.png"
+      },
+      %{
+        name: "Portus",
+        thumbnail: "png/portus.png"
       },
       %{
         name: "PostgreSql",
