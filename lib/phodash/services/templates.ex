@@ -477,29 +477,297 @@ defmodule Phodash.Services.Templates do
         thumbnail: "png/sabnzbd.png"
       },
       %{
+        name: "Squidex",
+        thumbnail: "png/squidex.png"
+      },
+      %{
+        name: "Stapi",
+        thumbnail: "png/strapi.png"
+      },
+      %{
+        name: "Streama",
+        thumbnail: "png/streama.png"
+      },
+      %{
+        name: "Sync Lounge",
+        thumbnail: "png/synclounge.png"
+      },
+      %{
+        name: "SyncThing",
+        thumbnail: "png/syncthing.png"
+      },
+      %{
         name: "Synology",
         thumbnail: "png/synology.png"
+      },
+      %{
+        name: "Taiga",
+        thumbnail: "png/taiga.png"
+      },
+      %{
+        name: "Tandoor Recipes",
+        thumbnail: "png/tandoorrecipes.png"
+      },
+      %{
+        name: "Tasmo Admin",
+        thumbnail: "png/tasmoadmin.png"
       },
       %{
         name: "Tasmota",
         thumbnail: "png/tasmota.png"
       },
       %{
+        name: "Tautulli",
+        thumbnail: "png/tautulli.png"
+      },
+      %{
+        name: "Tdarr",
+        thumbnail: "png/tdarr.png"
+      },
+      %{
+        name: "Teedy",
+        thumbnail: "png/teedy.png"
+      },
+      %{
+        name: "Thanos",
+        thumbnail: "png/thanos.png"
+      },
+      %{
+        name: "Theia",
+        thumbnail: "png/theia.png"
+      },
+      %{
+        name: "The Lounge",
+        thumbnail: "png/thelounge.png"
+      },
+      %{
+        name: "Tiny Tiny RSS",
+        thumbnail: "png/tinytinyrss.png"
+      },
+      %{
+        name: "TP Link",
+        thumbnail: "png/tplink.png"
+      },
+      %{
+        name: "Traccar",
+        thumbnail: "png/traccar.png"
+      },
+      %{
         name: "Traefik",
         thumbnail: "png/traefik.png"
+      },
+      %{
+        name: "Transmission",
+        thumbnail: "png/transmisson.png"
+      },
+      %{
+        name: "Trilium",
+        thumbnail: "png/trilium.png"
+      },
+      %{
+        name: "TrueNAS",
+        thumbnail: "png/truenas.png"
+      },
+      %{
+        name: "Tube Archivist",
+        thumbnail: "png/tubearchivist.png"
+      },
+      %{
+        name: "Tube Sync",
+        thumbnail: "png/tubesync.png"
+      },
+      %{
+        name: "TV Headend",
+        thumbnail: "png/tvheadend.png"
+      },
+      %{
+        name: "Ubooquity",
+        thumbnail: "png/ubooquity.png"
+      },
+      %{
+        name: "Ultimate Guitar",
+        thumbnail: "png/ultimateguitar.png"
       },
       %{
         name: "Unifi",
         thumbnail: "png/unifi.png"
       },
       %{
+        name: "Unraid",
+        thumbnail: "png/unraid.png"
+      },
+      %{
+        name: "Updog",
+        thumbnail: "png/updog.png"
+      },
+      %{
+        name: "Uptime Kuma",
+        thumbnail: "png/uptimekuma.png"
+      },
+      %{
+        name: "UrBackup",
+        thumbnail: "png/urbackup.png"
+      },
+      %{
+        name: "Vale Tudo",
+        thumbnail: "png/valetudo.png"
+      },
+      %{
+        name: "Vault",
+        thumbnail: "png/vault.png"
+      },
+      %{
+        name: "VaultWarden",
+        thumbnail: "png/vaultwarden.png"
+      },
+      %{
+        name: "Vikunja",
+        thumbnail: "png/vikunja.png"
+      },
+      %{
+        name: "Virtual Radar Server",
+        thumbnail: "png/virtualradarserver.png"
+      },
+      %{
+        name: "VMWare",
+        thumbnail: "png/vmware.png"
+      },
+      %{
+        name: "VMWare Horizon",
+        thumbnail: "png/vmwarehorizon.png"
+      },
+      %{
         name: "VolumIO",
         thumbnail: "png/volumio.png"
       },
       %{
+        name: "Wallabag",
+        thumbnail: "png/wallabag.png"
+      },
+      %{
+        name: "WaniKani",
+        thumbnail: "png/wanikani.png"
+      },
+      %{
+        name: "Watcher",
+        thumbnail: "png/watcher.png"
+      },
+      %{
+        name: "Watch Tower",
+        thumbnail: "png/watchtower.png"
+      },
+      %{
+        name: "WebDAV",
+        thumbnail: "png/webdav.png"
+      },
+      %{
+        name: "Webmin",
+        thumbnail: "png/webmin.png"
+      },
+      %{
+        name: "WebTools",
+        thumbnail: "png/webtools.png"
+      },
+      %{
+        name: "Wekan",
+        thumbnail: "png/wekan.png"
+      },
+      %{
+        name: "Wetty",
+        thumbnail: "png/wetty.png"
+      },
+      %{
+        name: "WggenWeb",
+        thumbnail: "png/wggenweb.png"
+      },
+      %{
+        name: "WHOAMI",
+        thumbnail: "png/whoami.png"
+      },
+      %{
+        name: "WikiJS",
+        thumbnail: "png/wikijs.png"
+      },
+      %{
+        name: "Windows 8",
+        thumbnail: "png/windows8.png"
+      },
+      %{
+        name: "Windows 10",
+        thumbnail: "png/windows10.png"
+      },
+      %{
+        name: "Windows 98",
+        thumbnail: "png/windows98.png"
+      },
+      %{
+        name: "Windows NT",
+        thumbnail: "png/windowsnt.png"
+      },
+      %{
+        name: "Wireguard",
+        thumbnail: "png/wireguard.png"
+      },
+      %{
+        name: "Wizarr",
+        thumbnail: "png/wizarr.png"
+      },
+      %{
+        name: "Wordpress",
+        thumbnail: "png/wordpress.png"
+      },
+      %{
+        name: "XBrowser Sync",
+        thumbnail: "png/xbrowsersync.png"
+      },
+      %{
+        name: "Xigmanas",
+        thumbnail: "png/xigmanas.png"
+      },
+      %{
+        name: "Xteve",
+        thumbnail: "png/xteve.png"
+      },
+      %{
+        name: "Xwiki",
+        thumbnail: "png/xwiki.png"
+      },
+      %{
+        name: "Yacht",
+        thumbnail: "png/yacht.png"
+      },
+      %{
+        name: "Ynab",
+        thumbnail: "png/ynab.png"
+      },
+      %{
+        name: "Youtube",
+        thumbnail: "png/youtube.png"
+      },
+      %{
+        name: "YoutubeDL",
+        thumbnail: "png/youtubedl.png"
+      },
+      %{
+        name: "Zabbix",
+        thumbnail: "png/zabbix.png"
+      }
+      %{
         name: "Zigbee2Mqtt",
         thumbnail: "png/zigbee2mqtt.png"
       },
+      %{
+        name: "Zinc",
+        thumbnail: "png/zinc.png"
+      }
+      %{
+        name: "Zoneminder",
+        thumbnail: "png/zoneminder.png"
+      }
+      %{
+        name: "Zulip",
+        thumbnail: "png/zulip.png"
+      }
       %{
         name: "ZwaveJs",
         thumbnail: "png/zwavejs.png"
