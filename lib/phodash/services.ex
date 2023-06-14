@@ -18,13 +18,16 @@ defmodule Phodash.Services do
 
   """
   def list_providers do
-    Repo.all(Provider)
+    query = from(p in Provider, order_by: p.name)
+    Repo.all(query)
   end
 
   def list_providers_for_select do
     query = from(p in Provider, select: {p.name, p.id})
     Repo.all(query)
   end
+
+
 
   @doc """
   Gets a single provider.
@@ -41,6 +44,26 @@ defmodule Phodash.Services do
 
   """
   def get_provider!(id), do: Repo.get!(Provider, id)
+
+
+  def get_provider_by_name(name) do
+    Repo.get_by(Provider, name: name)
+  end
+
+
+  def update_provider_templates() do
+    templates = Phodash.Services.Templates.list_templates()
+
+    for template <- templates do
+      schema = get_provider_by_name(template.name)
+
+      if schema do
+        update_provider(schema, template)
+      else
+        create_provider(template)
+      end
+    end
+  end
 
   @doc """
   Creates a provider.

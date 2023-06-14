@@ -7,28 +7,37 @@
   </:actions>
 </.header>
 
-<.table
-  id="providers"
-  rows={@streams.providers}
-  row_click={fn {_id, provider} -> JS.navigate(~p"/providers/#{provider}") end}
->
-  <:col :let={{_id, provider}} label="Name"><%= provider.name %></:col>
-  <:col :let={{_id, provider}} label="Thumbnail"><%= provider.thumbnail %></:col>
-  <:action :let={{_id, provider}}>
-    <div class="sr-only">
-      <.link navigate={~p"/providers/#{provider}"}>Show</.link>
+<div id="provider-list" class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3" phx-update="stream" >
+  <div
+  :for={{id, provider} <- @streams.providers}
+  id={id}
+  data-id={provider.id}
+  data-category_id={provider.category}
+  class="card card-side bg-base-100 shadow-xl w-full">
+      <figure class="pl-5 mt-10"><img class="w-14" src={"/images/logos/#{provider.thumbnail}"} alt="Album"/></figure>
+    <div class="card-body">
+       <div class="card-actions justify-end">
+          <.link patch={"/providers/#{provider.id}/edit"} >
+              <button class="btn btn-square btn-sm">
+                <.icon name="hero-pencil-square" />
+              </button>
+            </.link>
+            <button class="btn btn-square btn-sm"  phx-click={JS.push("delete", value: %{id: provider.id}) |> hide("##{id}")}  data-confirm="Are you sure?">
+            <.icon name="hero-x-mark" />
+            </button>
+        </div>
+        <div class="flex">
+            <div class="flex-none">
+              <.link navigate={~p"/providers/#{provider}"}>
+                <h3 class="card-title"><%= provider.name %></h3>
+              </.link>
+              <%= provider.description %>
+            </div>
+       
+        </div>
     </div>
-    <.link patch={~p"/providers/#{provider}/edit"}>Edit</.link>
-  </:action>
-  <:action :let={{id, provider}}>
-    <.link
-      phx-click={JS.push("delete", value: %{id: provider.id}) |> hide("##{id}")}
-      data-confirm="Are you sure?"
-    >
-      Delete
-    </.link>
-  </:action>
-</.table>
+  </div>
+</div>
 
 <.modal :if={@live_action in [:new, :edit]} id="provider-modal" show on_cancel={JS.patch(~p"/providers")}>
   <.live_component

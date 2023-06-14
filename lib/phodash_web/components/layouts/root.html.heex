@@ -16,6 +16,14 @@
       <%= if @current_user do %>
         <li>
           <.link
+            navigate={~p"/providers"}
+            class="text-[0.8125rem] leading-6 link link-hover"
+          >
+            Providers
+          </.link>
+        </li>
+        <li>
+          <.link
             navigate={~p"/users/settings"}
             class="text-[0.8125rem] leading-6 link link-hover"
           >
