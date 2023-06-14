@@ -69,12 +69,157 @@ providers =
     thumbnail: "png/authelia.png"
   },
   %{
+    name: "AvmFritzBox",
+    thumbnail: "png/avmfritzbox.png"
+  },
+  %{
+    name: "Awx",
+    thumbnail: "png/awx.png"
+  },
+  %{
+    name: "Azure",
+    thumbnail: "png/azure.png"
+  },
+  %{
+    name: "Azure DNS",
+    thumbnail: "png/azuredns.png"
+  },
+  %{
+    name: "Bacula",
+    thumbnail: "png/bacula.png"
+  },
+  %{
+    name: "Badge",
+    thumbnail: "png/badge.png"
+  },
+  %{
+    name: "Baikal",
+    thumbnail: "png/baikal.png"
+  },
+  %{
+    name: "Bastillion",
+    thumbnail: "png/bastiillion.png"
+  },
+  %{
     name: "Bazarr",
     thumbnail: "png/bazarr.png"
   },
   %{
+    name: "Beats",
+    thumbnail: "png/beats.png"
+  },
+  %{
+    name: "Bithumen",
+    thumbnail: "png/bithumen.png"
+  },
+  %{
+    name: "Bit Warden",
+    thumbnail: "png/bitwarden.png"
+  },
+  %{
     name: "Blue Iris",
     thumbnail: "png/blueiris.png"
+  },
+  %{
+    name: "Booksonic",
+    thumbnail: "png/booksonic.png"
+  },
+  %{
+    name: "Bookstack",
+    thumbnail: "png/bookstack.png"
+  },
+  %{
+    name: "box",
+    thumbnail: "png/box.png"
+  },
+  %{
+    name: "BrewPi",
+    thumbnail: "png/brewpi.png"
+  },
+  %{
+    name: "Buxfer",
+    thumbnail: "png/buxfer.png"
+  },
+  %{
+    name: "Cabot",
+    thumbnail: "png/cabot.png"
+  },
+  %{
+    name: "CAdvisor",
+    thumbnail: "png/cadvisor.png"
+  },
+  %{
+    name: "CalibreWeb",
+    thumbnail: "png/calibreweb.png"
+  },
+  %{
+    name: "Cardigann",
+    thumbnail: "png/cardigann.png"
+  },
+  %{
+    name: "Change Detection",
+    thumbnail: "png/changedetection.png"
+  },
+  %{
+    name: "CheckMK",
+    thumbnail: "png/checkmk.png"
+  },
+  %{
+    name: "Chevereto",
+    thumbnail: "png/chevereto.png"
+  },
+  %{
+    name: "Chow Down",
+    thumbnail: "png/chowdown.png"
+  },
+  %{
+    name: "Chronograf",
+    thumbnail: "png/chronograf.png"
+  },
+  %{
+    name: "Clarkson",
+    thumbnail: "png/clarkson.png"
+  },
+  %{
+    name: "CloudCMD",
+    thumbnail: "png/cloudcmd.png"
+  },
+  %{
+    name: "Cockpit",
+    thumbnail: "png/cockpit.png"
+  },
+  %{
+    name: "Cockpit CMS",
+    thumbnail: "png/cockpitcms.png"
+  },
+  %{
+    name: "Code",
+    thumbnail: "png/code.png"
+  },
+  %{
+    name: "Code Server",
+    thumbnail: "png/codeserver.png"
+  },
+  %{
+    name: "CodiMD",
+    thumbnail: "png/codimd.png"
+  },
+
+  %{
+    name: "Concourse",
+    thumbnail: "png/concourse.png"
+  },
+  %{
+    name: "Couch Potato",
+    thumbnail: "png/couchpotato.png"
+  },
+  %{
+    name: "CPanel",
+    thumbnail: "png/cpanel.png"
+  },
+  %{
+    name: "Crypt Pad",
+    thumbnail: "png/cryptpad.png"
   },
   %{
     name: "Studio Code",
