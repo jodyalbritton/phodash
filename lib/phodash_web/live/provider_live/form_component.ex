@@ -109,6 +109,7 @@ defmodule PhodashWeb.ProviderLive.FormComponent do
 
       _ ->
         {:noreply, socket}
+        save_provider(socket, socket.assigns.action, provider_params)
     end
 
   end

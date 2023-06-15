@@ -23,7 +23,7 @@ defmodule Phodash.Services do
   end
 
   def list_providers_for_select do
-    query = from(p in Provider, select: {p.name, p.id})
+    query = from(p in Provider, select: {p.name, p.id}, order_by: p.name)
     Repo.all(query)
   end
 
