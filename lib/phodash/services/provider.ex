@@ -32,6 +32,6 @@ defmodule Phodash.Services.Provider do
       :twitter_handle,
       :github_url
       ])
-    |> validate_required([:name, :thumbnail])
+    |> validate_required([:name])
   end
 end

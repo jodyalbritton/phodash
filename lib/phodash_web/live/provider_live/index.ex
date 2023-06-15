@@ -6,7 +6,9 @@ defmodule PhodashWeb.ProviderLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, stream(socket, :providers, Services.list_providers())}
+    {:ok,
+      socket
+        |> stream(:providers, Services.list_providers())}
   end
 
   @impl true
