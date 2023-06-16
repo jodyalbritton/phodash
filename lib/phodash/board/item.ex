@@ -9,6 +9,8 @@ defmodule Phodash.Board.Item do
     field :position, :integer
     field :title, :string
     field :url, :string
+    field :status, Ecto.Enum, values: [:unknown, :up, :down], default: :unknown
+    field :monitored, :boolean
 
     belongs_to :category, Phodash.Board.Category
     belongs_to :user, Phodash.Accounts.User
@@ -20,7 +22,7 @@ defmodule Phodash.Board.Item do
   @doc false
   def changeset(item, attrs) do
     item
-    |> cast(attrs, [:title, :url, :description, :position, :provider_id])
+    |> cast(attrs, [:title, :url, :description, :position, :provider_id, :status, :monitored])
     |> validate_required([:title, :url])
   end
 end

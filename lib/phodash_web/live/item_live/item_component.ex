@@ -21,7 +21,7 @@ defmodule PhodashWeb.ItemComponent do
           data-id={item.id}
           data-category_id={item.category_id}
           class="indicator w-full">
-          <span class="indicator-item indicator-top indicator-end badge bg-green-500" />
+          <span class={"indicator-item indicator-top indicator-end badge #{get_status_color(item)}"} />
           <div class="card card-side bg-base-100 shadow-xl w-full">
             <figure class="pl-5 mt-10"><img class="w-14" src={"/images/logos/#{item.provider.thumbnail}"} alt="Album"/></figure>
             <div class="card-body">
@@ -108,6 +108,17 @@ defmodule PhodashWeb.ItemComponent do
         Board.move_item_to_category(socket.assigns.scope, item, category, new_idx)
         {:noreply, socket}
     end
+  end
+
+
+  defp get_status_color(item) do
+    case item.status do
+      :unknown -> "bg-neutral"
+      :up -> "bg-green-500"
+      :down -> "bg-red-500"
+    end
+
+
   end
 
 

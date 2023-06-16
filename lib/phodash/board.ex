@@ -251,7 +251,7 @@ defmodule Phodash.Board do
 
   """
   def list_items do
-    Repo.all(Item)
+    Repo.all(Item) |> Repo.preload([:user, :provider])
   end
 
   @doc """
@@ -306,6 +306,7 @@ defmodule Phodash.Board do
       {:ok, %{item: item}} ->
 
         broadcast(scope, %Events.ItemAdded{item: item |> Repo.preload(:provider)})
+        Phodash.Workers.ScheduleWorker.perform(%{args: %{"user_id" => scope.current_user.id, "item_id" => item.id, "url" => item.url}, attempt: 1})
 
         {:ok, item}
 
@@ -332,7 +333,6 @@ defmodule Phodash.Board do
     |> Repo.update()
     |> case do
       {:ok, new_item} ->
-
 
         broadcast(scope, %Events.ItemUpdated{item: new_item})
 
@@ -430,6 +430,49 @@ defmodule Phodash.Board do
     end
   end
 
+  def check_items_up() do
+    items = list_items()
+
+    for item <- items do
+      user = item.user
+      scope = Phodash.Scope.for_user(user)
+      req = Req.new(base_url: item.url)
+
+      status=
+      case Req.get(req, url: "/") do
+        {:ok, res} ->
+          case res.status do
+            200 -> :up
+            _-> :down
+          end
+        {:error, _res} ->
+          :down
+      end
+
+      update_item(scope, item, %{status: status})
+    end
+    :ok
+  end
+
+  def check_item_up(user_id, item_id, url) do
+    user = Phodash.Accounts.get_user!(user_id)
+    scope = Phodash.Scope.for_user(user)
+    item = Phodash.Board.get_item!(scope, item_id)
+    req = Req.new(base_url: url)
+
+      status=
+      case Req.get(req, url: "/") do
+        {:ok, res} ->
+          case res.status do
+            200 -> :up
+            _-> :down
+          end
+        {:error, _res} ->
+          :down
+      end
+
+      update_item(scope, item, %{status: status})
+  end
 
 
   defp broadcast(%Scope{} = scope, event) do
@@ -489,6 +532,9 @@ defmodule Phodash.Board do
   defp multi_update_all(multi, name, func, opts \\ []) do
     Ecto.Multi.update_all(multi, name, func, opts)
   end
+
+
+
 
 
 

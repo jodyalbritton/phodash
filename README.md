@@ -10,7 +10,13 @@ To start your Phodash server:
 ## Docker Compose 
 
   * clone the repo
-  * docker compose up
+  * docker compose up -d
+
+
+## Updating With Docker Compose
+  
+  * git pull
+  * docker compose up -d --force-recreate
 
 
 

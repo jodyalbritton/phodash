@@ -12,6 +12,8 @@ defmodule Phodash.Application do
       PhodashWeb.Telemetry,
       # Start the Ecto repository
       Phodash.Repo,
+      # Oban
+      {Oban, Application.fetch_env!(:phodash, Oban)},
       # Start the PubSub system
       {Phoenix.PubSub, name: Phodash.PubSub},
       # Start Finch
