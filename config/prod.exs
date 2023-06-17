@@ -4,7 +4,7 @@ import Config
 config :phodash, Phodash.Repo,
   username: System.get_env("PGUSER", "postgres"),
   password: System.get_env("PGPASSWORD", "postgres"),
-  database: System.get_env("PGDATABASE", "phodash_dev"),
+  database: System.get_env("PGDATABASE", "phodash_prod"),
   hostname: System.get_env("PGHOST", "localhost"),
   port: String.to_integer(System.get_env("PGPORT", "5432")),
 # Note we also include the path to a cache manifest
