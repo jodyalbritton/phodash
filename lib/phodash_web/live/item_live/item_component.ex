@@ -37,7 +37,7 @@ defmodule PhodashWeb.ItemComponent do
               </div>
                 <div class="flex">
                     <div class="flex-none">
-                      <.link href={item.url} >
+                      <.link href="/">
                         <h3 class="card-title"><%= item.title %></h3>
                       </.link>
                       <%= item.description %>
