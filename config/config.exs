@@ -63,7 +63,7 @@ config :phoenix, :json_library, Jason
 config :phodash, Oban,
   repo: Phodash.Repo,
   plugins: [Oban.Plugins.Pruner],
-  queues: [default: 10, scheduled: 10]
+  queues: [default: 10, events: 10]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

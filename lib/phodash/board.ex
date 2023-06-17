@@ -306,7 +306,10 @@ defmodule Phodash.Board do
       {:ok, %{item: item}} ->
 
         broadcast(scope, %Events.ItemAdded{item: item |> Repo.preload(:provider)})
-        Phodash.Workers.ScheduleWorker.perform(%{args: %{"user_id" => scope.current_user.id, "item_id" => item.id, "url" => item.url}, attempt: 1})
+
+        %{user_id: scope.current_user.id, item_id: item.id, url: item.url}
+          |> Phodash.Workers.ScheduleWorker.new()
+          |> Oban.insert()
 
         {:ok, item}
 
@@ -333,6 +336,30 @@ defmodule Phodash.Board do
     |> Repo.update()
     |> case do
       {:ok, new_item} ->
+          Phodash.JobManager.cancel_job(item.id)
+
+          %{user_id: scope.current_user.id, item_id: new_item.id, url: new_item.url}
+            |> Phodash.Workers.ScheduleWorker.new()
+            |> Oban.insert()
+
+
+        broadcast(scope, %Events.ItemUpdated{item: new_item})
+
+        {:ok, new_item}
+
+      other ->
+        other
+    end
+  end
+
+
+  def update_item_status(%Scope{} = scope, %Item{} = item, attrs) do
+    item
+    |> Item.changeset(attrs)
+    |> Repo.update()
+    |> case do
+      {:ok, new_item} ->
+
 
         broadcast(scope, %Events.ItemUpdated{item: new_item})
 
@@ -356,6 +383,10 @@ defmodule Phodash.Board do
 
   """
  def delete_item(%Scope{} = scope, %Item{} = item) do
+
+
+    Phodash.JobManager.cancel_job(item.id)
+
     Ecto.Multi.new()
     |> multi_decrement_positions(:dec_rest_in_list, item, category_id: item.category_id)
     |> Ecto.Multi.delete(:item, item)
@@ -449,7 +480,7 @@ defmodule Phodash.Board do
           :down
       end
 
-      update_item(scope, item, %{status: status})
+      update_item_status(scope, item, %{status: status})
     end
     :ok
   end
@@ -471,7 +502,7 @@ defmodule Phodash.Board do
           :down
       end
 
-      update_item(scope, item, %{status: status})
+      update_item_status(scope, item, %{status: status})
   end
 
 
