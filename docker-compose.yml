@@ -13,6 +13,8 @@ services:
       PGDATABASE: phodash_dev
       PGHOST: db
       PGPORT: 5432
+      DATABASE_URL: ecto://postgres:postgres@db/phodash_prod
+      SECRET_KEY_BASE: yfS/m/JQxtNBDIPn2F9MCnArcbmYBenDBs7fdUj0/XAKdVNmMkTRGmkk7E6Ao1bD
     depends_on:
       - db
   db:

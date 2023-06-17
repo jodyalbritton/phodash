@@ -77,7 +77,12 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get install -y nodejs
+
 WORKDIR "/app"
+
+RUN npm install --prefix ./assets
+
 RUN chown nobody /app
 
 # set runner ENV
@@ -88,4 +93,4 @@ COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/phodash ./
 
 USER nobody
 
-CMD ["/app/bin/server"]
+CMD ["/app/entrypoint.sh"]
