@@ -10,7 +10,7 @@ services:
     environment:
       PGUSER: postgres
       PGPASSWORD: postgres
-      PGDATABASE: phodash_dev
+      PGDATABASE: phodash_prod
       PGHOST: db
       PGPORT: 5432
       DATABASE_URL: ecto://postgres:postgres@db/phodash_prod
