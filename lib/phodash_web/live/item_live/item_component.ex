@@ -23,9 +23,10 @@ defmodule PhodashWeb.ItemComponent do
           class="indicator w-full">
           <span class={"indicator-item indicator-top indicator-end badge #{get_status_color(item)}"} />
           <div class="card card-side bg-base-100 shadow-xl w-full">
-            <figure class="pl-5 mt-10"><img class="w-14" src={"/images/logos/#{item.provider.thumbnail}"} alt="Album"/></figure>
+            <figure class="pl-5"><img class="w-14" src={"/images/logos/#{item.provider.thumbnail}"} alt="Album"/></figure>
             <div class="card-body">
               <div class="card-actions justify-end">
+                <div class="edit-toggle hidden">
                 <.link patch={"/categories/#{item.category_id}/items/#{item.id}/edit"} >
                     <button class="btn btn-square btn-sm">
                       <.icon name="hero-pencil-square" />
@@ -34,6 +35,7 @@ defmodule PhodashWeb.ItemComponent do
                   <button class="btn btn-square btn-sm"  phx-click={JS.push("delete", value: %{id: item.id}) |> hide("##{id}")} phx-target={@myself} data-confirm="Are you sure?">
                   <.icon name="hero-x-mark" />
                   </button>
+                </div>
               </div>
                 <div class="flex">
                     <div class="flex-none">

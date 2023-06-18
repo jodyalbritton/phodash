@@ -2,6 +2,7 @@ defmodule PhodashWeb.DashboardLive do
   use PhodashWeb, :live_view
   alias Phodash.Events
   alias Phodash.Board
+  alias Phoenix.LiveView.JS
 
   @impl true
   def mount(_params, _session, socket) do
@@ -13,6 +14,7 @@ defmodule PhodashWeb.DashboardLive do
     categories = Board.active_categories(socket.assigns.scope, 20)
     {:ok,
       socket
+        |> assign(:editing, false)
         |> assign(:providers, providers)
         |> stream(:categories, categories)
     }
@@ -67,6 +69,17 @@ defmodule PhodashWeb.DashboardLive do
     {:noreply, socket}
   end
 
+  def handle_event("editing", _params, socket) do
+
+    IO.puts("edit event")
+    {:noreply,
+    socket
+      |> assign(:editing, !socket.assigns.editing)}
+
+
+
+  end
+
   defp apply_action(socket, :dashboard, _params) do
     socket
     |> assign(:page_title, "Dashboard")
@@ -97,5 +110,17 @@ defmodule PhodashWeb.DashboardLive do
     socket
     |> assign(:page_title, "Edit Item")
     |> assign(:item, Board.get_item!(socket.assigns.scope, id))
+  end
+
+  def show_edit(js \\ %JS{}, selector) do
+    js
+    |> JS.push("editing")
+    |> JS.show(to: selector, transition: "fade-in")
+  end
+
+  def hide_edit(js \\ %JS{}, selector) do
+    js
+    |> JS.push("editing")
+    |> JS.hide(to: selector, transition: "fade-out")
   end
 end

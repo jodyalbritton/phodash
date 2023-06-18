@@ -1,10 +1,23 @@
  <div id="dashboard" class="space-y-5">
     <.header>
-        Categories
+        <div class="edit-toggle hidden">
+          Categories
+        </div>
         <:actions>
-            <.link patch={~p"/categories/new"}>
-            <.button>New Category</.button>
-            </.link>
+            <div class="form-control">
+              <label class="label cursor-pointer">
+                <span class="label-text">Edit</span> 
+                <input type="checkbox" class="toggle" checked={@editing} phx-click={if @editing == true do hide_edit(".edit-toggle") else show_edit(".edit-toggle") end }/>
+              </label>
+            </div>
+            <div class="edit-toggle hidden">
+              <.link patch={~p"/categories/new"}>
+              <.button>New Category</.button>
+              </.link>
+            </div>
+
+          
+
         </:actions>
     </.header>
 
@@ -19,6 +32,7 @@
           data-id={category.id}
           class="bg-neutral py-4 rounded-lg mb-5">
           <div class="px-4 space-y-4">
+            <div class="edit-toggle hidden">
             <.header>
               <%= category.title %>
               <:actions>
@@ -33,6 +47,7 @@
                 </.link>
               </:actions>
             </.header>
+            </div>
             <.live_component
               id={category.id}
               module={PhodashWeb.ItemComponent}
