@@ -44,10 +44,6 @@ defmodule PhodashWeb.ProviderLive.FormComponent do
             </article>
           <% end %>
 
-          <%!-- Phoenix.Component.upload_errors/1 returns a list of error atoms --%>
-          <%= for err <- upload_errors(@uploads.thumbnail) do %>
-            <p class="alert alert-danger"><%= error_to_string(err) %></p>
-          <% end %>
 
         </section>
         <.live_file_input upload={@uploads.thumbnail} />
